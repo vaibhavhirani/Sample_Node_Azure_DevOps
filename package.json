@@ -1,0 +1,23 @@
+{
+  "name": "sample_node_azure_devops",
+  "version": "1.0.0",
+  "description": "A sample node to be deployed on Azure using Azure DevOps",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaibhavhirani/Sample_Node_Azure_DevOps.git"
+  },
+  "author": "Vaibhav Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaibhavhirani/Sample_Node_Azure_DevOps/issues"
+  },
+  "homepage": "https://github.com/vaibhavhirani/Sample_Node_Azure_DevOps#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
