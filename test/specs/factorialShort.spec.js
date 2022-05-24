@@ -1,4 +1,4 @@
-const Factorial = require('../../app/factorial.js');
+const Factorial = require('../../app/index.js');
 const chai = require('chai');
 const spies = require('chai-spies');
 const { expect } = require('chai');
