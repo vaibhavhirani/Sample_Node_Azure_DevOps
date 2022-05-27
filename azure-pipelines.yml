@@ -19,8 +19,8 @@ jobs:
   - script: 'npm install'
     displayName: 'Install'
 
-  - script: 'mocha --config ./test/config/mocha.config.js'
+  - script: 'npm run test'
     displayName: 'Unit Test'
 
-  - script: 'nyc npm run test'
+  - script: 'npm run coverage'
     displayName: 'Coverage'
