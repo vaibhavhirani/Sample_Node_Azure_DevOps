@@ -18,8 +18,8 @@ steps:
 - script: 'npm install'
   displayName: 'Install'
 
-- script: 'npm run test'
+- script: 'mocha --config ./test/config/mocha.config.js'
   displayName: 'Unit Test'
 
-- script: 'npm run coverage'
+- script: 'nyc npm run test'
   displayName: 'Coverage'
