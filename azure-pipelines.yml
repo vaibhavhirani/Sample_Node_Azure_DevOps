@@ -6,20 +6,21 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+- job: Linux
+  pool:
+    vmImage: ubuntu-latest
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - script: 'npm install'
+    displayName: 'Install'
 
-- script: 'npm install'
-  displayName: 'Install'
+  - script: 'mocha --config ./test/config/mocha.config.js'
+    displayName: 'Unit Test'
 
-- script: 'mocha --config ./test/config/mocha.config.js'
-  displayName: 'Unit Test'
-
-- script: 'nyc npm run test'
-  displayName: 'Coverage'
+  - script: 'nyc npm run test'
+    displayName: 'Coverage'
