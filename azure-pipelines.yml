@@ -7,7 +7,7 @@ trigger:
 - master
 
 jobs:
-- job: Linux
+- job: Build
   pool:
     vmImage: ubuntu-latest
   steps:
